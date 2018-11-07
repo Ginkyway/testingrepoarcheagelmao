@@ -1,0 +1,54 @@
+[
+    {
+        "name": "Villanelle Luxury Local Specialty",
+        "region": "Villanelle",
+        "quality": "Luxury",
+        "type": "Local",
+        "mats": [
+            {
+                "name": "Chopped Produce",
+                "quantity": 150
+            },
+            {
+                "name": "Rice",
+                "quantity": 15
+            }
+        ],
+        "prices": [
+            {
+                "outlet": "Solis Headlands",
+                "base": 135412
+            },
+            {
+                "outlet": "Ynystere",
+                "base": 141222
+            }
+        ]
+    },
+    {
+        "name": "Solis Headlands Luxury Specialty",
+        "region": "Solis Headlands",
+        "quality": "Luxury",
+        "type": "Regular",
+        "mats": [
+            {
+                "name": "Ground Spices",
+                "quantity": 100
+            },
+            {
+                "name": "Jujube",
+                "quantity": 25
+            }
+        ],
+        "prices": [
+            {
+                "outlet": "Villanelle",
+                "base": 121545
+            },
+            {
+                "outlet": "Ynystere",
+                "base": 148793
+            }
+        ]
+    }
+]

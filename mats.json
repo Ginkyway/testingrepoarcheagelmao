@@ -1,0 +1,26 @@
+[
+    {
+        "_id": 1,
+        "name": "Chopped Produce",
+        "icon": "img/mats/choppedproduce.png",
+        "price": 350
+    },
+    {
+        "_id": 2,
+        "name": "Rice",
+        "icon": "img/mats/rice.png",
+        "price": 300
+    },
+    {
+        "_id": 3,
+        "name": "Ground Spices",
+        "icon": "img/mats/groundspices.png",
+        "price": 400
+    },
+    {
+        "_id": 4,
+        "name": "Jujube",
+        "icon": "img/mats/jujube.png",
+        "price": 2000
+    }
+]
