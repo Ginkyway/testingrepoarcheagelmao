@@ -1,53 +1,63 @@
 [
     {
-        "name": "Villanelle Luxury Local Specialty",
-        "region": "Villanelle",
+        "region": "Haranya - Solis Headlands",
         "quality": "Luxury",
-        "type": "Local",
-        "mats": [
+        "packs": [
             {
-                "name": "Chopped Produce",
-                "quantity": 150
-            },
-            {
-                "name": "Rice",
-                "quantity": 15
-            }
-        ],
-        "prices": [
-            {
-                "outlet": "Solis Headlands",
-                "base": 135412
-            },
-            {
-                "outlet": "Ynystere",
-                "base": 141222
+                "name": "Solis Headlands Luxury Specialty",
+                "icon": "",
+                "type": "Regular",
+                "mats": [
+                    {
+                        "name": "Ground Spices",
+                        "quantity": 100
+                    },
+                    {
+                        "name": "Jujube",
+                        "quantity": 25
+                    }
+                ],
+                "prices": [
+                    {
+                        "outlet": "Villanelle",
+                        "base": 121545
+                    },
+                    {
+                        "outlet": "Ynystere",
+                        "base": 148793
+                    }
+                ]
             }
         ]
     },
     {
-        "name": "Solis Headlands Luxury Specialty",
-        "region": "Solis Headlands",
+        "region": "Haranya - Villanelle",
         "quality": "Luxury",
-        "type": "Regular",
-        "mats": [
+        "packs": [
             {
-                "name": "Ground Spices",
-                "quantity": 100
-            },
-            {
-                "name": "Jujube",
-                "quantity": 25
-            }
-        ],
-        "prices": [
-            {
-                "outlet": "Villanelle",
-                "base": 121545
-            },
-            {
-                "outlet": "Ynystere",
-                "base": 148793
+                "name": "Villanelle Luxury Local Specialty",
+                "icon": "",
+                "type": "Local",
+                "mats": [
+                    {
+                        "name": "Chopped Produce",
+                        "quantity": 150
+                    },
+                    {
+                        "name": "Rice",
+                        "quantity": 15
+                    }
+                ],
+                "prices": [
+                    {
+                        "outlet": "Solis Headlands",
+                        "base": 135412
+                    },
+                    {
+                        "outlet": "Ynystere",
+                        "base": 141222
+                    }
+                ]
             }
         ]
     }
