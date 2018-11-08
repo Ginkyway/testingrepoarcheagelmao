@@ -1,6 +1,6 @@
 [
     {
-        "region": "Haranya - Solis Headlands",
+        "zone": "Haranya - Solis Headlands",
         "quality": "Luxury",
         "packs": [
             {
@@ -31,7 +31,7 @@
         ]
     },
     {
-        "region": "Haranya - Villanelle",
+        "zone": "Haranya - Villanelle",
         "quality": "Luxury",
         "packs": [
             {
