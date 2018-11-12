@@ -2,18 +2,30 @@
 <html>
 
 <head>
-    <title>JS DB test</title>
+    <meta charset="utf-8">
+    <title>aacalc</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="calc.js"></script>
+    <script src="aacalc.js"></script>
 </head>
 
 <body>
-    
-    <select id="zone" name="zone"></select>
-    <select id="pack" name="packs"></select>
-    <select id="outlet" name="outlet"></select>
-    <input type="number" name="demand" value="130" step="1" max="130" min="70">
-
+    <div id="aacalc_container">
+        <div id="aacalc_section_route">
+            <select id="aacalc_zone" size="10"></select>
+            <select id="aacalc_pack" size="10"></select>
+            <select id="aacalc_outlet" size="10"></select>
+        </div>
+        <div id="aacalc_section_modifiers">
+            Commerce proficiency: <select id="aacalc_commerceprof"></select><br />
+            Husbandry proficiency: <select id="aacalc_husbandryprof"></select><br />
+            Demand: <input id="aacalc_demand" type="number"><br />
+            Delivery time: <select id="aacalc_time"></select><br />
+            War: <input id="aacalc_war" type="checkbox">
+        </div>
+        <div id="aacalc_section_output">
+            <span id="aacalc_price"></span>
+        </div>
+    </div>
 </body>
 
 </html>

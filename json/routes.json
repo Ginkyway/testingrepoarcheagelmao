@@ -1,0 +1,283 @@
+[
+    {
+        "name": "Haranya - Solis Headlands",
+        "quality": "Luxury",
+        "packs": [
+            {
+                "name": "Solis Luxury Specialty",
+                "icon": "",
+                "type": "Regular",
+                "mats": [
+                    {
+                        "name": "Ground Spices",
+                        "quantity": 100
+                    },
+                    {
+                        "name": "Jujube",
+                        "quantity": 25
+                    }
+                ],
+                "outlets": [
+                    {
+                        "name": "Villanelle",
+                        "price": 123456
+                    },
+                    {
+                        "name": "Ynystere",
+                        "price": 123456
+                    }
+                ]
+            },
+            {
+                "name": "Solis Luxury Gilda Specialty",
+                "icon": "",
+                "type": "Gilda",
+                "mats": [
+                    {
+                        "name": "Medicinal Powder",
+                        "quantity": 150
+                    },
+                    {
+                        "name": "Yata Fur",
+                        "quantity": 10
+                    }
+                ],
+                "outlets": [
+                    {
+                        "name": "Billanelle",
+                        "price": 123456
+                    },
+                    {
+                        "name": "Ynystere",
+                        "price": 123456
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Haranya - Villanelle",
+        "quality": "Luxury",
+        "packs": [
+            {
+                "name": "Villanelle Luxury Local Specialty",
+                "icon": "",
+                "type": "Local",
+                "mats": [
+                    {
+                        "name": "Chopped Produce",
+                        "quantity": 150
+                    },
+                    {
+                        "name": "Rice",
+                        "quantity": 15
+                    }
+                ],
+                "outlets": [
+                    {
+                        "name": "Solis Headlands",
+                        "price": 135412
+                    },
+                    {
+                        "name": "Ynystere",
+                        "price": 123456
+                    }
+                ]
+            },
+            {
+                "name": "Villanelle Luxury Gilda Specialty",
+                "icon": "",
+                "type": "Gilda",
+                "mats": [
+                    {
+                        "name": "Dried Flowers",
+                        "quantity": 150
+                    },
+                    {
+                        "name": "Wool",
+                        "quantity": 10
+                    }
+                ],
+                "outlets": [
+                    {
+                        "name": "Solis Headlands",
+                        "price": 112632
+                    },
+                    {
+                        "name": "Ynystere",
+                        "price": 123456
+                    }
+                ]
+            },
+            {
+                "name": "Villanelle Luxury Aged Honey",
+                "icon": "",
+                "type": "Honey",
+                "mats": [
+                    {
+                        "name": "Multi-Purpose Aging Larder",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Honey",
+                        "quantity": 4
+                    },
+                    {
+                        "name": "Hay Bale",
+                        "quantity": 20
+                    }
+                ],
+                "outlets": [
+                    {
+                        "name": "Solis Headlands",
+                        "price": 179380
+                    },
+                    {
+                        "name": "Ynystere",
+                        "price": 123456
+                    }
+                ]
+            },
+            {
+                "name": "Villanelle Luxury Fertilizer Specialty",
+                "icon": "",
+                "type": "Fertilizer",
+                "mats": [
+                    {
+                        "name": "Chopped Produce",
+                        "quantity": 50
+                    },
+                    {
+                        "name": "Ground Grain",
+                        "quantity": 50
+                    },
+                    {
+                        "name": "Trimmed Meat",
+                        "quantity": 50
+                    },
+                    {
+                        "name": "Dried Flowers",
+                        "quantity": 50
+                    }
+                ],
+                "outlets": [
+                    {
+                        "name": "Solis Headlands",
+                        "price": 123361
+                    },
+                    {
+                        "name": "Ynystere",
+                        "price": 123456
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Haranya - Windscour Savannah",
+        "quality": "Preserved",
+        "packs": [
+            {
+                "name": "Windscour Concentrated Antidote",
+                "icon": "",
+                "type": "Boss",
+                "mats": [
+                    {
+                        "name": "Twinhead Viper Fang",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Lumber",
+                        "quantity": 100
+                    }
+                ],
+                "outlets": [
+                    {
+                        "name": "Solis Headlands",
+                        "price": 123321
+                    },
+                    {
+                        "name": "Villanelle",
+                        "price": 123456
+                    },
+                    {
+                        "name": "Ynystere",
+                        "price": 234432
+                    }
+                ]
+            },
+            {
+                "name": "Windscour Preserved Fertilizer Specialty",
+                "icon": "",
+                "type": "Fertilizer",
+                "mats": [
+                    {
+                        "name": "Chopped Produce",
+                        "quantity": 50
+                    },
+                    {
+                        "name": "Ground Grain",
+                        "quantity": 50
+                    },
+                    {
+                        "name": "Trimmed Meat",
+                        "quantity": 50
+                    },
+                    {
+                        "name": "Dried Flowers",
+                        "quantity": 50
+                    }
+                ],
+                "outlets": [
+                    {
+                        "name": "Solis Headlands",
+                        "price": 123361
+                    },
+                    {
+                        "name": "Villanelle",
+                        "price": 123654
+                    },
+                    {
+                        "name": "Ynystere",
+                        "price": 123456
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Nuia - Ahnimar",
+        "quality": "Preserved",
+        "packs": [
+            {
+                "name": "Ahnimar Preserved Specialty",
+                "icon": "",
+                "type": "Regular",
+                "mats": [
+                    {
+                        "name": "Chopped Produce",
+                        "quantity": 200
+                    },
+                    {
+                        "name": "Mushroom",
+                        "quantity": 15
+                    }
+                ],
+                "outlets": [
+                    {
+                        "name": "Cinderstone Moor",
+                        "price": 123456
+                    },
+                    {
+                        "name": "Solzreed Peninsula",
+                        "price": 123123
+                    },
+                    {
+                        "name": "Two Crowns",
+                        "price": 123321
+                    }
+                ]
+            }
+        ]
+    }
+]
