@@ -1,7 +1,7 @@
 {
     "interest": 1.02,
-    "demand_max": 1.3,
-    "demand_min": 0.7,
+    "demand_max": 130,
+    "demand_min": 70,
     "war_bonus": 1.15,
     "war_zones": [
         "Ynystere",
