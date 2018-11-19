@@ -2,6 +2,7 @@
     "interest": 1.02,
     "demand_max": 130,
     "demand_min": 70,
+    "stipend_bonus": 1.02,
     "war_bonus": 1.15,
     "war_zones": [
         "Ynystere",
@@ -45,23 +46,28 @@
     "pack_type": [
         {
             "name": "Regular",
-            "labor_cost": 50
+            "labor_cost": 50,
+            "craft_fee": 5000
         },
         {
             "name": "Gilda",
-            "labor_cost": 50
+            "labor_cost": 50,
+            "craft_fee": 5000
         },
         {
             "name": "Local",
-            "labor_cost": 60
+            "labor_cost": 60,
+            "craft_fee": 7500
         },
         {
             "name": "Fertilizer",
-            "labor_cost": 60
+            "labor_cost": 60,
+            "craft_fee": 7500
         },
         {
             "name": "Boss",
-            "labor_cost": 60
+            "labor_cost": 60,
+            "craft_fee": 7500
         },
         {
             "name": "Salve",

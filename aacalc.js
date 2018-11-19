@@ -13,6 +13,7 @@ $(function () {
     const $selHusbandryProf = $("#aacalc_husbandryprof");
     const $inDemand = $("#aacalc_demand");
     const $inWar = $("#aacalc_war");
+    const $inStipend = $("#aacalc_stipend");
     const $spPrice = $("#aacalc_price");
     var mats;
     var modifiers;
@@ -21,9 +22,11 @@ $(function () {
     var curPack;
     var curOutlet;
     var curType;
+    var curQuality;
+    var curStage;
     var multDemand;
-    var multQuality;
-    var isWar;
+    var war;
+    var stipend;
 
     function refreshMats() {
         var items = routes[curZone].packs[curPack].mats;
@@ -31,8 +34,8 @@ $(function () {
         items.forEach(function (item) {
             var matData = mats.find((n) => n.name === item.name);
             var dispPrice = (function () {
-                if (matData === undefined) return "No data";
-                if (!matData.hasOwnProperty("price")) return "N/A";
+                if (matData === undefined) { return "No data"; }
+                if (!matData.hasOwnProperty("price")) { return "N/A"; }
                 return matData.price;
             })();
             matsHtml += "<div class='aacalc_mat_item'>" +
@@ -79,9 +82,8 @@ $(function () {
     }
 
     function refreshDeliveryTime() {
-        var qIndex = modifiers.pack_quality.findIndex((q) => q.name === routes[curZone].quality);
         var options = "", upperDuration = 0, lowerDuration = 0;
-        modifiers.pack_quality[qIndex].stages.forEach(function (q, i) {
+        modifiers.pack_quality[curQuality].stages.forEach(function (q, i) {
             if (i === 0) {
                 upperDuration += q.duration;
                 options +=
@@ -107,16 +109,49 @@ $(function () {
         $selTime.html(options);
     }
 
+    function refreshPrice() { //super dirty
+        var p = routes[curZone].packs[curPack].outlets[curOutlet].price;
+        p *= multDemand;
+        p *= modifiers.pack_quality[curQuality].stages[curStage].multiplier;
+        p *= modifiers.interest;
+        if (war) { p *= modifiers.war_bonus; }
+        if (stipend) { p *= modifiers.stipend_bonus; }
+        $spPrice.html(p);
+
+        var curTypeID = modifiers.pack_type.findIndex((t) => t.name === curType)
+        var c = modifiers.pack_type[curTypeID].craft_fee;
+        var items = routes[curZone].packs[curPack].mats;
+        items.forEach(function (item) {
+            var matData = mats.find((n) => n.name === item.name);
+            var matPrice = (function () {
+                if (matData === undefined || !matData.hasOwnProperty("price")) { return 0; }
+                return matData.price;
+            })();
+            c += item.quantity * matPrice;
+        });
+        $("#aacalc_cost").html(c);
+
+        var pr = p - c;
+        $("#aacalc_profit").html(pr);
+
+        var l = modifiers.pack_type[curTypeID].labor_cost;
+        l += modifiers.labor_sell;
+        $("#aacalc_laborcost").html(l);
+
+        var pl = pr / l;
+        $("#aacalc_profitperlabor").html(pl);
+    }
+
     function initializeApp() {
         $.when(
             $.getJSON("json/mats.json"),
             $.getJSON("json/modifiers.json"),
             $.getJSON("json/routes.json")
-            ).done(function (_mats, _modifiers, _routes) {
+        ).done(function (_mats, _modifiers, _routes) {
             mats = _mats[0];
             modifiers = _modifiers[0];
             routes = _routes[0];
-            
+
             var options = "";
             modifiers.labor_proficiency.forEach(function (prof, i) {
                 options +=
@@ -132,7 +167,8 @@ $(function () {
                 "step": 1,
                 "value": modifiers.demand_max
             });
-            
+            multDemand = modifiers.demand_max / 100;
+
             refreshRouteList($selZone);
         });
     }
@@ -143,6 +179,8 @@ $(function () {
 
     $selZone.change(function () {
         curZone = $selZone.find(":selected").attr("value");
+        curQuality = modifiers.pack_quality.findIndex((q) => q.name === routes[curZone].quality);
+
         refreshRouteList($selPack);
         refreshDeliveryTime();
     });
@@ -175,17 +213,17 @@ $(function () {
 
     $inDemand.change(function () {
         var val = $inDemand.val();
-        if (!Number.isInteger(val))
-            $inDemand.val(Math.floor(val));
-        if (val > modifiers.demand_max)
-            $inDemand.val(modifiers.demand_max);
-        else if (val < modifiers.demand_min)
-            $inDemand.val(modifiers.demand_min);
-        
-        multDemand = $inDemand.val() / 100;
+        var demand;
+        if (!Number.isInteger(val)) { demand = Math.floor(val); }
+        if (val > modifiers.demand_max) { demand = modifiers.demand_max; }
+        else if (val < modifiers.demand_min) { demand = modifiers.demand_min; }
+
+        $inDemand.val(demand);
+        multDemand = demand / 100;
     });
 
     $selTime.change(function () {
-        var qIndex = $selTme.find(":selected").attr("value");
+        curStage = $selTime.find(":selected").attr("value");
+        refreshPrice();
     });
 });
